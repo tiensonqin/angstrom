@@ -51,6 +51,8 @@ type +'a t
 type bigstring =
   (char, Bigarray.int8_unsigned_elt, Bigarray.c_layout) Bigarray.Array1.t
 
+val unsafe_lookahead : 'a t -> 'a t
+
 (** {2 Basic parsers} *)
 
 val peek_char : char option t
