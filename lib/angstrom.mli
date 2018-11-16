@@ -173,6 +173,10 @@ val scan : 'state -> ('state -> char -> 'state option) -> (string * 'state) t
 (** [scan init f] consumes until [f] returns [None]. Returns the final state
     before [None] and the accumulated string *)
 
+val scan1 : 'state -> ('state -> char -> 'state option) -> (string * 'state) t
+(** [scan1 init f] consumes until [f] returns [None]. Returns the final state
+    before [None] and the accumulated string *)
+
 val scan_state : 'state -> ('state -> char -> 'state option) -> 'state t
 (** [scan_state init f] Like [scan] but only returns the final state before
     [None]. Much more efficient than [scan]*)
